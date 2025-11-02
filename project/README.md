@@ -36,19 +36,21 @@ python --version
 
 ### 1. Run the benchmark (compare all versions)
 
-To execute the benchmark that compares the three compression strategies, open a terminal **at the root of the project** and type:
+To execute the benchmark that compares the three compression strategies, open a terminal **at the root of the project directory** and type:
 
 python -m benchmark.test
 
 ### 2. Run the main (an example)
 
 A simple demonstration is available in examples/example_main.py to test one compression mode directly.
-To execute the main, open a terminal **at the root of the project** and type:
+To execute the main, open a terminal **at the root of the project directory** and type:
 
 python -m example_main
 
 You can modify the code inside example_main.py to test other modes:
 
 bp = make_bitpacker("simple", 12)
+
 bp = make_bitpacker("overlap", 12)
+
 bp = make_bitpacker("overflow", 12, overflow_limit=8)
